@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+  background: #f4f4f4;
+  color: #111111;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+}
+
+.hero h1 span {
+  color: #00bfff;
+}
+
+.hero p {
+  opacity: 0.75;
+  font-size: 1.1rem;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: #00bfff;
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.outline {
+  background: transparent;
+  color: inherit;
+  border: 1px solid currentColor;
+}
+
+.works {
+  padding: 80px 10%;
+}
+
+.works h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.grid-window {
+  height: 70vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.grid-window::-webkit-scrollbar {
+  width: 6px;
+}
+
+.grid-window::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+}
+
+body.light .grid-window::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.grid {
+  column-count: 4;
+  column-gap: 22px;
+}
+
+@media (max-width: 1200px) {
+  .grid { column-count: 3; }
+}
+@media (max-width: 800px) {
+  .grid { column-count: 2; }
+}
+@media (max-width: 500px) {
+  .grid { column-count: 1; }
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 14px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  break-inside: avoid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light .card {
+  background: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+body.light .card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.media {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.media img,
+.media video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card h3 {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 10%;
+  opacity: 0.5;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 0 6%;
+  }
+
+  .works {
+    padding: 60px 6%;
+  }
+
+  .grid-window {
+    height: auto;
+    overflow: visible;
+  }
+}
