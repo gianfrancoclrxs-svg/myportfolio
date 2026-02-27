@@ -10,10 +10,17 @@
 
   <header class="hero">
     <h1>Hi, I’m <span>Gian</span></h1>
-    <p>BSIT Student | Graphic Design | Director for Multimedia, SFITI</p>
+    <p>BSIT Student | Graphic Designer | Director for Multimedia, SFITI</p>
 
     <div class="buttons">
-      <a href="assets/Gian-Resume.pdf" download class="btn">View Resume</a>
+      <a href="#" class="btn" onclick="openResume()">View Resume</a>
+      <script>
+      function openResume() {
+        if (confirm("This resume is for professional use only. Continue?")) {
+          window.open("assets/Gian-Resume.pdf", "_blank");
+        }
+      }
+      </script>
       <button id="toggleTheme" class="btn outline">Toggle Theme</button>
     </div>
   </header>
