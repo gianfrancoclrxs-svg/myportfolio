@@ -206,3 +206,33 @@ footer {
   object-fit: cover;
   display: block;
 }
+
+.social-icons {
+  margin-top: 25px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  margin: 0 10px;
+  color: inherit;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  opacity: 0.7;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-link .card {
+  transition: 0.3s ease;
+}
+
+.card-link:hover .card {
+  transform: translateY(-6px);
+}
